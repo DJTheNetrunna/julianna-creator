@@ -1,0 +1,40 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/julianna-creator/uploads"
+
+site_url: "https://djthenetrunna.github.io/julianna-creator/"
+display_url: "https://djthenetrunna.github.io/julianna-creator/"
+logo_url: "https://djthenetrunna.github.io/julianna-creator/"
+
+collections:
+  - name: "creator"
+    label: "Creator Studio"
+    files:
+      - name: "profile"
+        label: "Profile & Homepage"
+        file: "content/profile.json"
+        format: "json"
+        fields:
+          - {label: "Creator Name", name: "name", widget: "string"}
+          - {label: "Headline", name: "headline", widget: "string"}
+          - {label: "Short Bio", name: "bio", widget: "text"}
+          - {label: "Instagram URL", name: "instagram", widget: "string"}
+          - {label: "Facebook URL", name: "facebook", widget: "string"}
+      - name: "featured"
+        label: "Featured Content"
+        file: "content/featured.json"
+        format: "json"
+        fields:
+          - label: "Featured Items"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Category", name: "category", widget: "select", options: ["Creative", "Digital", "Lifestyle", "Favorites"]}
+              - {label: "Image", name: "image", widget: "image"}
+              - {label: "Caption", name: "caption", widget: "text", required: false}
+              - {label: "Link", name: "link", widget: "string", required: false}
