@@ -1,17 +1,15 @@
 backend:
-  name: github
-  repo: DJTheNetrunna/julianna-creator
+  name: git-gateway
   branch: main
-  open_authoring: true
 
 publish_mode: editorial_workflow
 
 media_folder: "uploads"
-public_folder: "/julianna-creator/uploads"
+public_folder: "/uploads"
 
-site_url: "https://djthenetrunna.github.io/julianna-creator/"
-display_url: "https://djthenetrunna.github.io/julianna-creator/"
-logo_url: "https://djthenetrunna.github.io/julianna-creator/"
+site_url: "https://harmonious-pony-11af6f.netlify.app/"
+display_url: "https://harmonious-pony-11af6f.netlify.app/"
+logo_url: "https://harmonious-pony-11af6f.netlify.app/"
 
 collections:
   - name: "creator"
