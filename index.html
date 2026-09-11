@@ -10,6 +10,7 @@
   <meta property="og:type" content="website">
   <title>Juliana Aracely | Digital Creator</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
   <div class="aurora aurora-one" aria-hidden="true"></div>
@@ -66,5 +67,12 @@
 
   <footer><span>JULIANA ✦</span><p>Digital creator portfolio.</p></footer>
   <script src="script.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on('init', function(user) {
+        if (!user) window.netlifyIdentity.on('login', function() { document.location.href = '/admin/'; });
+      });
+    }
+  </script>
 </body>
 </html>
